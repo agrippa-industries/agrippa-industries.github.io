@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Agrippa Industries - A New Maritime Legacy. Forged in America.">
-    <title>Agrippa Industries | A New Maritime Legacy</title>
+    <meta name="description" content="Agrippa Industries is a growing maritime logistics company dedicated to serving a variety of partners. Designed to deliver, forged in America.">
+    <title>Agrippa Industries</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
@@ -33,24 +33,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Progressive enhancement: older browsers use 'center', modern use 'safe center' */
-            justify-content: center;
-            justify-content: safe center; /* Prevents overflow cropping in modern browsers */
             padding: 2rem;
         }
 
-        /* Fallback for older browsers: prevent content cropping in landscape */
-        @media (orientation: landscape) and (max-height: 500px) {
-            body {
-                justify-content: flex-start;
-            }
-        }
-
         main {
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto 0;
         }
 
         .logo {
@@ -79,69 +76,82 @@
             text-transform: uppercase;
         }
 
-        .tagline {
+        .slogan {
             font-family: var(--font-sans);
             font-weight: 500;
-            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-            color: var(--agrippa-dove-grey);
+            font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+            color: var(--agrippa-salt-spray-white);
             text-align: center;
-            margin-bottom: 2.75rem;
+            max-width: 600px;
+            line-height: 1.4;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .tagline {
+            font-family: var(--font-sans);
+            font-weight: 400;
+            font-size: 1rem;
+            color: var(--agrippa-salt-spray-white);
+            text-align: center;
+            margin-bottom: 1.5rem;
             max-width: 700px;
             line-height: 1.5;
         }
 
-        .links {
+        .footer {
             display: flex;
-            gap: 0;
             align-items: center;
             justify-content: center;
-            margin-bottom: 4rem;
-        }
-
-        .links a {
+            flex-wrap: wrap;
+            width: 100%;
             font-family: var(--font-sans);
-            font-weight: 500;
-            font-size: 1rem;
-            color: var(--agrippa-salt-spray-white);
-            text-decoration: none;
-            padding: 0.5rem 1.5rem;
-            transition: color 0.2s ease;
-            position: relative;
+            font-size: 0.875rem;
+            color: var(--agrippa-dove-grey);
         }
 
-        .links a:hover,
-        .links a:focus {
+        .footer .copyright {
+            padding: 0.5rem 0.5rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer a {
+            color: var(--agrippa-salt-spray-white);
+            font-weight: 500;
+            text-decoration: none;
+            padding: 0.875rem 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer a:hover,
+        .footer a:focus {
             color: white;
             outline: none;
         }
 
-        .links a:focus-visible {
+        .footer a:focus-visible {
             text-decoration: underline;
             text-decoration-thickness: 2px;
             text-underline-offset: 4px;
         }
 
-        .links .divider {
-            color: var(--agrippa-dove-grey);
-            padding: 0 0.5rem;
+        .footer .divider {
+            padding: 0 0.125rem;
             user-select: none;
-        }
-
-        .footer {
-            font-family: var(--font-sans);
-            font-size: 0.75rem;
-            color: var(--agrippa-dove-grey);
-            text-align: center;
         }
 
         /* Mobile optimization */
         @media (max-width: 640px) {
             body {
-                padding: 1.5rem;
+                padding: 1.25rem;
             }
 
             .logo {
-                margin-bottom: 1.5rem;
+                margin-bottom: 1.25rem;
             }
 
             .wordmark {
@@ -149,44 +159,40 @@
             }
 
             .tagline {
-                margin-bottom: 2rem;
-            }
-
-            .links {
-                margin-bottom: 3rem;
-            }
-
-            .links .divider {
-                padding: 0 0.75rem;
+                margin-bottom: 1rem;
             }
 
             .footer {
-                font-size: 0.7rem;
+                font-size: 0.8rem;
             }
         }
     </style>
 </head>
 <body>
     <main>
-        <img
-            src="assets/icons/agrippa-white.svg"
-            alt="Agrippa Industries Logo - two white segments meeting at an angle, forming a stylized letter A "
-            class="logo"
-        >
+        <div class="hero">
+            <img
+                src="assets/icons/agrippa-white.svg"
+                alt="Agrippa Industries Logo - two white segments meeting at an angle, forming a stylized letter A "
+                class="logo"
+            >
 
-        <h1 class="wordmark">Agrippa Industries</h1>
+            <h1 class="wordmark">Agrippa Industries</h1>
 
-        <p class="tagline">A New Maritime Legacy. Forged in America.</p>
+            <p class="slogan">Designed to Deliver &middot; Forged in America</p>
+        </div>
 
-        <nav class="links" aria-label="Contact">
-            <a href="mailto:careers@agrippaindustries.com">Join Us</a>
-            <span class="divider">|</span>
-            <a href="mailto:info@agrippaindustries.com">Contact</a>
-        </nav>
+        <p class="tagline">Agrippa Industries is a growing maritime logistics company dedicated to serving a variety of partners.</p>
     </main>
 
     <footer class="footer">
-        &copy; 2026 Agrippa Industries Inc.
+        <span class="copyright">&copy; 2026 Agrippa Industries Inc.</span>
+        <span class="divider" aria-hidden="true">&middot;</span>
+        <nav class="footer-nav" aria-label="Contact">
+            <a href="mailto:careers@agrippaindustries.com">Join Us</a>
+            <span class="divider" aria-hidden="true">&middot;</span>
+            <a href="mailto:info@agrippaindustries.com">Contact</a>
+        </nav>
     </footer>
 </body>
 </html>
